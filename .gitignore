@@ -1,0 +1,80 @@
+################################
+# 1. Build outputs (TUYỆT ĐỐI không commit)
+################################
+build/
+dist/
+out/
+Debug/
+Release/
+anh/
+maloi/
+module_IOT_custom1/ 
+module_IOT_custom3/
+PCB1_modul IOT/
+scan/
+schematic/
+simple_ota_example/
+sntp/
+test_scan_wifi/ 
+
+*.o
+*.obj
+*.elf
+*.hex
+*.bin
+*.map
+*.exe
+*.dll
+*.so
+*.a
+*.lib
+
+################################
+# 2. Archive / compressed files (dễ >100MB)
+################################
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+*.pdf
+*.docx
+*.json
+
+################################
+# 3. IDE / Editor config
+################################
+.vscode/
+.idea/
+.metadata/
+.settings/
+*.code-workspace
+*.user
+*.suo
+*.log
+
+################################
+# 4. OS generated files
+################################
+.DS_Store
+Thumbs.db
+
+################################
+# 5. Secrets / Config (CHỐT CHẶN)
+################################
+.env
+.env.*
+config.h
+config.hpp
+secrets.*
+*.key
+*.pem
+*.secret
+*.token
+
+################################
+# 6. Test / temp
+################################
+*.tmp
+*.bak
+*.swp
