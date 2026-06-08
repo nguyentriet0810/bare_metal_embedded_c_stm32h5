@@ -18,16 +18,10 @@
 # This file is generated only once, and is not re-generated.
 #
 # User is free to modify the file as much as necessary
-## 1. Ép buộc CMake hiểu đây là dự án Nhúng (Bare-metal)
-set(CMAKE_SYSTEM_NAME Generic)
-set(CMAKE_SYSTEM_PROCESSOR arm)
-
-# 2. CHÌA KHÓA: Bảo CMake chỉ compile thử thành static library, KHÔNG cần link thành .exe khi test
-set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
-
+#
 
 # Core project settings
-project("FirstProject")
+project("systick_timer")
 enable_language(C CXX ASM)
 message("Build type: " ${CMAKE_BUILD_TYPE})
 
@@ -54,7 +48,11 @@ set(sources_SRCS
 # Include directories for all compilers
 set(include_DIRS
 	${CMAKE_CURRENT_SOURCE_DIR}/Inc
+    ${CMAKE_CURRENT_SOURCE_DIR}/Driver/CMSIS/Device/ST/STM32H5xx
+    ${CMAKE_CURRENT_SOURCE_DIR}/Driver/CMSIS/Device/Include
 )
+
+add_compile_definitions(STM32H503xx)
 
 # Include directories for each compiler
 set(include_c_DIRS)
